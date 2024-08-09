@@ -5,7 +5,11 @@ const PORT = 3001;
 const router = express.Router();
 app.use(router);
 router.get("/", (req, res) => {
-  res.end("Hello EXPRESS");
+  res.end();
+});
+router.get("/about", (req, res) => {
+  res.cookie("name","Bangladesh");
+  res.end();
 });
 router.post("/", (req, res) => {
   res.end("Hello EXPRESS, I am from Post");
