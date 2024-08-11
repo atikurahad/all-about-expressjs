@@ -8,11 +8,18 @@ router.get("/", (req, res) => {
   res.end();
 });
 router.get("/about", (req, res) => {
-  res.cookie("name","Bangladesh");
+  res.send('I am working on ecommerce projects')
   res.end();
 });
+router.get("/contact", (req, res) => {
+  res.send('Please contact hotline:8810965');
+});
+
 router.post("/", (req, res) => {
   res.end("Hello EXPRESS, I am from Post");
+});
+router.put("/", (req, res) => {
+  res.end("Hello EXPRESS, I am from put");
 });
 
 app.listen(PORT, () => {
