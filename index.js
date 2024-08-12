@@ -1,5 +1,15 @@
+/*
+ * Make a simple todo
+ * CRUD operation
+ * Mongoose
+ * MongoDb
+ * Author:Atikur Rahaman Ahad
+ * Date:08/12/2024
+ */
+
 const express = require("express");
 const mongoose = require("mongoose");
+const todoHandler = require('./routeHandler/todoHandler')
 
 //express app initialize
 const app = express();
