@@ -8,7 +8,7 @@ const express = require("express");
 const router = express.Router();
 const mongoose = require("mongoose");
 const todoSchema = require("../schemas/todoSchema");
-const Todo = new mongoose.model("Todo",todoSchema);
+const Todo = new mongoose.model("Todo", todoSchema);
 //get All the todos
 
 router.get("/", async (req, res) => {});
@@ -16,27 +16,14 @@ router.get("/", async (req, res) => {});
 //get a todo by id
 
 router.get("/id:", async (req, res) => {});
-//POST todo
 
-router.post("/", async (req, res) => {
-    const newTodo = new Todo(req.body);
-    await newTodo.save((err)=>{
-        if(err){
-            res.status(500).json({
-                error: "there was a server site eroro"
-            })
+//POST A todo
 
-        }
-        else{
-            res.status(200).json({
-                message:"todo inserted sucsessfully"
-            })
-        }
-    })
+router.post('/',async(req,res)=>{
+   let newTodo = req.body()
+   await newTodo.save()
+})
 
-
-
-});
 //POST multiple todo
 
 router.post("/all", async (req, res) => {});
