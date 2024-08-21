@@ -10,6 +10,10 @@ const todoSchema = mongoose.Schema({
         required: true
     },
     description: String,
+    price:{
+        type:Number,
+        required:true,
+    },
    
     date:{
         type:Date,
